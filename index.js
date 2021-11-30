@@ -4,10 +4,10 @@ const cors = require("cors");
 app.use(cors());
 require("dotenv").config();
 
-const cryptoInfo = require("./routes/cryptoInfo");
-app.use(cryptoInfo);
-const cryptoPrice = require("./routes/cryptoPrice");
-app.use(cryptoPrice);
+const cryptocurrencyInfo = require("./routes/cryptocurrencyInfo");
+app.use(cryptocurrencyInfo);
+const cryptocurrencyListingsLatest = require("./routes/cryptocurrencyListingsLatest");
+app.use(cryptocurrencyListingsLatest);
 
 app.get("/", (req, res) => {
   res.json({ message: "Backend-Crypto" });
