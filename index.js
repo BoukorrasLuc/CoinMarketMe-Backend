@@ -8,6 +8,8 @@ const cryptocurrencyInfo = require("./routes/cryptocurrencyInfo");
 app.use(cryptocurrencyInfo);
 const cryptocurrencyListingsLatest = require("./routes/cryptocurrencyListingsLatest");
 app.use(cryptocurrencyListingsLatest);
+const globalMetrics = require("./routes/globalMetrics");
+app.use(globalMetrics);
 
 app.get("/", (req, res) => {
   res.json({ message: "Backend-Crypto" });
