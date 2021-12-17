@@ -1,8 +1,8 @@
-// const rp = require("request-promise");
+const rp = require("request-promise");
 const express = require("express");
 const router = express.Router();
 
-const dataCryptocurrencyInfo = require("../Data-CoinMarketCap/cryptocurrency-listings-latest.json");
+const dataCryptocurrencyInfo = require("../Data-CoinMarketCap/cryptocurrency-info.json");
 
 router.get("/cryptocurrencyInfo", async (req, res) => {
   try {
@@ -10,7 +10,7 @@ router.get("/cryptocurrencyInfo", async (req, res) => {
     //   method: "GET",
     //   uri: "https://pro-api.coinmarketcap.com/v1/cryptocurrency/info",
     //   qs: {
-    //     slug: "polkadot",
+    //     id: "1,2,3",
     //   },
     //   headers: {
     //     "X-CMC_PRO_API_KEY": process.env.API_KEY_CoinMarketCap,
