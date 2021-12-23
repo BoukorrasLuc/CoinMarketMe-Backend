@@ -1,8 +1,8 @@
- const rp = require("request-promise");
+const rp = require("request-promise");
 const express = require("express");
 const router = express.Router();
 
-// const dataCryptocurrencyListingsLatest = require("../Data-CoinMarketCap/cryptocurrency-listings-latest.json");
+// const dataCryptocurrencyListingsLatest = require("../Data-CoinMarketCap/cryptocurrency-trending-latest.json");
 
 router.get("", async (req, res) => {
   try {
@@ -12,7 +12,6 @@ router.get("", async (req, res) => {
       qs: {
         start: "1",
         limit: "10000",
-        
       },
       headers: {
         "X-CMC_PRO_API_KEY": process.env.API_KEY_CoinMarketCap,
